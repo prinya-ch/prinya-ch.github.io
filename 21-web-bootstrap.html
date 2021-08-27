@@ -7,11 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+    <style>
+        .btn-primary {
+            font-family: 'Sriracha', cursive;
+        }
+
+        .jumbotron {
+            position: relative;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .jumbotron video {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /*  object-fit is not supported on IE  */
+            object-fit: cover;
+            /* opacity: 0.5; */
+        }
+
+        .jumbotron .container {
+            z-index: 2;
+            position: relative;
+        }
+    </style>
+
     <title>21-web-bootstrap.html</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="jumbotron jumbotron-fluid mb-0"
+        style="background-image: url(https://www.appliedimage.com/wp-content/uploads/2013/10/header-background.png); background-size: cover;">
+        <video
+            src="https://player.vimeo.com/external/181445574.hd.mp4?s=d24f32d879305e931468d55e4d7ce6efb5a95c39&amp;profile_id=119"
+            autoplay loop playsinline muted></video>
+        <!-- <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg"
+                allowfullscreen></iframe>
+        </div> -->
+        <div class="container text-light">
+            <h1 class="display-3">Fluid jumbo heading</h1>
+            <p class="lead">Jumbo helper text</p>
+
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: navy;">
         <a class="navbar-brand" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-calendar2-month-fill" viewBox="0 0 16 16">
@@ -71,9 +118,12 @@
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color:navy; font-family: 'Sriracha', cursive;">Go
+                            somewhere</a>
                     </div>
                 </div>
             </div>
@@ -83,9 +133,10 @@
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" style="background-color: navy;">Go somewhere</a>
                     </div>
                 </div>
             </div>
