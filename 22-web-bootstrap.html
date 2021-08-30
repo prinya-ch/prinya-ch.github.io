@@ -117,7 +117,7 @@
                     <img src="https://www.fin.unsw.edu.au/sites/default/files/styles/leader/public/industry-3087393_1920_2.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">บันทึกข้อมูลนักเรียน</h5>
                         <p class="card-text">
                         <div class="form-group">
                             <label for="">รหัสนักเรียน</label>
@@ -132,11 +132,13 @@
                             <small id="helpId" class="text-muted"></small>
                         </div>
                         </p>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" 
+                        style="background-color: navy;" 
+                        type="submit" onclick="display_data()">Submit</button>
 
-                        <a href="#" class="btn btn-primary"
+                        <!-- <a href="#" class="btn btn-primary"
                             style="background-color:navy; font-family: 'Sriracha', cursive;">Go
-                            somewhere</a>
+                            somewhere</a> -->
                     </div>
                 </div>
             </div>
@@ -145,12 +147,9 @@
                     <img src="https://www.fin.unsw.edu.au/sites/default/files/styles/leader/public/industry-3087393_1920_2.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary" style="background-color: navy;">Go somewhere</a>
+                        <h5 class="card-title">ผลลัพธ์</h5>
+                        <p class="card-text" id="output"></p>
+                        <!-- <a href="#" class="btn btn-primary" style="background-color: navy;">Go somewhere</a> -->
                     </div>
                 </div>
             </div>
@@ -164,6 +163,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+    <script>
+        let sid
+        let sname
+        function display_data() {
+            sid = document.getElementById('sid').value
+            sname = document.getElementById('sname').value
+            document.getElementById('output').innerHTML = sid + ' ' + sname
+            document.getElementById('sid').value = ''
+            document.getElementById('sname').value = ''
+        }
+    </script>
 </body>
 
 </html>
