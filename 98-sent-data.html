@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>98-sent-data.html</title>
+</head>
+<body>
+    <form action="98-show-data.html" method="post" id="f">
+        <input type="text" name="sname" id="sname" value="10">
+        <noscript>
+            <button type="submit">Submit</button>
+        </noscript>
+    </form>
+    <script>
+        window.onload = function sent_data() {
+            let sname = document.getElementById('f')
+            setTimeout(() => {
+                sname.submit()
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
