@@ -62,7 +62,7 @@
         style="background-image: url(https://www.appliedimage.com/wp-content/uploads/2013/10/header-background.png); background-size: cover;">
 
         <video
-            src="https://vod-progressive.akamaized.net/exp=1630405316~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4026%2F18%2F470132649%2F2091297210.mp4~hmac=0877e65b5001894c74e486851f97af8ace2a25a362fbf7b60cc150e19dd52bbd/vimeo-prod-skyfire-std-us/01/4026/18/470132649/2091297210.mp4?download=1&filename=pexels-free-creative-stuff-5649214.mp4"
+            src="https://cdn.videvo.net/videvo_files/video/free/2015-03/large_watermarked/fire_background_loop1_videvo_preview.mp4"
             autoplay loop muted></video>
 
         <div class="container text-light">
@@ -97,7 +97,10 @@
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="94-set-json-array.html">SET</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="94-get-json-array.html">GET</a>
                 </li>
             </ul>
         </div>
@@ -155,16 +158,24 @@
         crossorigin="anonymous"></script>
 
     <script>
-        let student = '[{"sid" : "1001", "sname" : "Prinya"},{"sid" : "1002", "sname" : "Prakit"}]'
-        let s = []
+        //let student = '[{"sid" : "1001", "sname" : "Prinya"},{"sid" : "1002", "sname" : "Prakit"}]'
+        let student = localStorage.getItem('student')
+        let s
         function data_storage() {
-            console.log(typeof(student))
-            //console.log(student.sid[0])
-            s = JSON.parse(student)
+            s = eval(student)
+            //s.push({"sid" : "1003", "sname" : "Santichai"})
+            //console.log(s)
+            //console.log(JSON.stringify(s))
+            //console.log(s[0]["sid"] + ' ' + s[0]["sname"])
+
+            // for (let i of s) {
+            //     console.log(i.sid)
+            // }
+            s.push({"sid" : document.getElementById('sid').value, "sname" : document.getElementById('sname').value})
             console.log(s)
-            // student = JSON.stringify({ sid: document.getElementById('sid').value, sname: document.getElementById('sname').value })
-            // console.log(student)
-            // sessionStorage.setItem('student', student)
+            student = JSON.stringify(s)
+            console.log(student)
+            localStorage.setItem('student', student)
             // window.open('96-get-local-storage.html')
             // location.4href = '95-get-session.html'
         }
