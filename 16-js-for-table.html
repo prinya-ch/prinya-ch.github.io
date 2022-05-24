@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- นายปริญญา จำเนียรพล -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-js-for-table.html</title>
+</head>
+<body>
+    <table border="1" style="border-collapse:collapse ; width: 100%;">
+        <tr>
+            <th>รหัส</th>
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+        </tr>
+        <!-- <tr>
+            <td>6430910098</td>
+            <td>ปริญญา</td>
+            <td>จำเนียรพล</td>
+        </tr>
+        <tr>
+            <td>6430910099</td>
+            <td>จักรกฤษณ์</td>
+            <td>ทับทิมทอง</td>
+        </tr> -->
+        <script>
+            for (let i = 1; i <= 100; i++) {
+                document.write('<tr>')
+                document.write('<td>' + i + '</td>')
+                document.write('<td></td>')
+                document.write('<td></td>')
+                document.write('</tr>')
+            }
+        </script>
+    </table>
+    
+</body>
+</html>
